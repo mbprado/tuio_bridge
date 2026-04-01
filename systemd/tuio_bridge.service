@@ -1,0 +1,11 @@
+[Unit]
+Description=TUIO Touch Bridge
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/tuio_bridge/tuio_bridge.py
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
