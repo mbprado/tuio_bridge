@@ -1,7 +1,8 @@
 # TUIO Touch Bridge (Linux)
 
 A lightweight TUIO → Linux input bridge that converts TUIO `/2Dcur`
-messages into native Linux touch events using uinput.
+messages into native Linux touch events using uinput. 
+This project was initially planned as a replacement for Multitaction Cornerstone, but using TUIO instead.  
 
 ## Features
 
@@ -22,6 +23,7 @@ messages into native Linux touch events using uinput.
 ```bash
 pip install -r requirements.txt
 sudo python3 tuio_touch/bridge.py
+``` 
 
 
 ## tuio_bridge project 
