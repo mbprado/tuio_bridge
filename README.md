@@ -16,6 +16,7 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 - Linux
 - Python 3
 - evdev
+- pyyaml
 - uinput kernel module
 
 ## Installation
@@ -24,6 +25,13 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 pip install -r requirements.txt
 sudo python3 tuio_touch/bridge.py
 ``` 
+## Command line options
+
+--width
+--height
+--port
+--debug
+--config
 
 
 ## tuio_bridge project 

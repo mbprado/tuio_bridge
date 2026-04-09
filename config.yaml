@@ -1,0 +1,8 @@
+screen:
+  width: 1920
+  height: 1080
+
+network:
+  port: 3333
+
+debug: false
