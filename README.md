@@ -41,11 +41,16 @@ sudo ./setup.sh
 `--debug`: Enable debug logs  
 `--config`: Define configuration file  
 
-## tuio_bridge project 
+## About tuio_bridge project 
 
 Reverse-engineered TUIO input  
 Built a custom OSC parser  
-Created a Linux input bridge  
+Created a Linux input bridge
+
+## To do 
+
+Multi touch support for gestures on Gnome
+deb package  
 
 ## Credits
 
