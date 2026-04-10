@@ -8,6 +8,7 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 
 - Works with MultiTaction and other TUIO devices
 - No proprietary runtime required (replacement for Cornerstone)
+- No need to deal with python-osc
 - Single-touch compatible (works on kernels without MT support)
 - Native GNOME / Wayland support
 
@@ -16,21 +17,40 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 - Linux
 - Python 3
 - evdev
+- pyyaml
 - uinput kernel module
 
 ## Installation
 
+Install and test:
 ```bash
 pip install -r requirements.txt
 sudo python3 tuio_touch/bridge.py
 ``` 
 
+Install service:
+```bash
+sudo ./setup.sh
+```
 
-## tuio_bridge project 
+## Command line options
 
-Reverse-engineered TUIO input
-Built a custom OSC parser
+`--width`: Screen width  
+`--height`: Screen width  
+`--port`: TUIO UDP port  
+`--debug`: Enable debug logs  
+`--config`: Define configuration file  
+
+## About tuio_bridge project 
+
+Reverse-engineered TUIO input  
+Built a custom OSC parser  
 Created a Linux input bridge
+
+## To do 
+
+Multi touch support for gestures on Gnome
+deb package  
 
 ## Credits
 
