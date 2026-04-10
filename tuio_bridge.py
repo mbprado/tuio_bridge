@@ -5,7 +5,7 @@ TUIO → Linux Touch Bridge
 Author: Murilo Borghi Prado
 Assisted by: ChatGPT (OpenAI)
 
-Minimal OSC parser + uinput bridge (single-touch version)
+OSC parser + uinput bridge (multi-touch version)
 """
 
 import socket
