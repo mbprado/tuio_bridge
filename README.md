@@ -8,6 +8,7 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 
 - Works with MultiTaction and other TUIO devices
 - No proprietary runtime required (replacement for Cornerstone)
+- No need to deal with python-osc
 - Single-touch compatible (works on kernels without MT support)
 - Native GNOME / Wayland support
 
@@ -21,17 +22,24 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 
 ## Installation
 
+Install and test:
 ```bash
 pip install -r requirements.txt
 sudo python3 tuio_touch/bridge.py
 ``` 
+
+Install service:
+```bash
+sudo ./setup.sh
+```
+
 ## Command line options
 
---width
---height
---port
---debug
---config
+`--width`: Screen width
+`--height`: Screen width
+`--port`: TUIO UDP port
+`--debug`: Enable debug logs 
+`--config`: Define configuration file
 
 
 ## tuio_bridge project 
