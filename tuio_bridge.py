@@ -15,7 +15,6 @@ import signal
 import sys
 from evdev import UInput, AbsInfo, ecodes as e
 
-MAX_SLOTS = 10  # max simultaneous touches
 
 # -------------------
 # CONFIG LOADER
@@ -57,6 +56,7 @@ def parse_args():
     p.add_argument("--port", type=int)
     p.add_argument("--debug", action="store_true")
     p.add_argument("--single", action="store_true", help="Force single-touch mode")
+    p.add_argument("--slots", type=int, help="Max multitouch slots")
     return p.parse_args()
 
 # -------------------
@@ -70,7 +70,7 @@ def main():
     height = args.height or cfg.get("screen", {}).get("height", 1080)
     port = args.port or cfg.get("network", {}).get("port", 3333)
     debug = args.debug or cfg.get("debug", False)
-
+    MAX_SLOTS = args.slots or cfg.get("input", {}).get("slots", 10)
     mode = "single" if args.single else cfg.get("input", {}).get("mode", "multi")
 
     logging.basicConfig(level=logging.DEBUG if debug else logging.INFO)

@@ -1,5 +1,6 @@
 input:
   mode: multi
+  slots: 10
 screen:
   width: 1920
   height: 1080
