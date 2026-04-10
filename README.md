@@ -35,18 +35,17 @@ sudo ./setup.sh
 
 ## Command line options
 
-`--width`: Screen width
-`--height`: Screen width
-`--port`: TUIO UDP port
-`--debug`: Enable debug logs 
-`--config`: Define configuration file
-
+`--width`: Screen width  
+`--height`: Screen width  
+`--port`: TUIO UDP port  
+`--debug`: Enable debug logs  
+`--config`: Define configuration file  
 
 ## tuio_bridge project 
 
-Reverse-engineered TUIO input
-Built a custom OSC parser
-Created a Linux input bridge
+Reverse-engineered TUIO input  
+Built a custom OSC parser  
+Created a Linux input bridge  
 
 ## Credits
 
