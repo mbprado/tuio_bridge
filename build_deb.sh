@@ -20,7 +20,7 @@ mkdir -p "$PKG_DIR/etc/udev/rules.d"
 # -------------------------
 # Copy main script
 # -------------------------
-install -m 0755 tuio_touch.py "$PKG_DIR/usr/bin/$APP_NAME"
+install -m 0755 tuio_bridge.py "$PKG_DIR/usr/bin/$APP_NAME"
 
 # -------------------------
 # Default config (optional)
