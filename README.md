@@ -21,16 +21,21 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 - uinput kernel module
 
 ## Installation
+Manual installation (Clone repository or Download ZIP)
+
+```bash
+git clone https://github.com/mbprado/tuio_bridge.git
+```
 
 Run and test:
 ```bash
 pip install -r requirements.txt
-sudo python3 tuio_touch/bridge.py
+sudo python3 tuio_bridge.py
 ``` 
 
 Install service:
 ```bash
-sudo ./setup.sh
+sudo ./install.sh
 ```
 
 ## Command line options
