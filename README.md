@@ -46,7 +46,46 @@ sudo ./install.sh
 `--debug`: Enable debug logs  
 `--config`: Define configuration file  
 `--mode`: Touch screen mode: single or multi  
-`--slots`: Numer of simultaneous touchs. Multi-mode only
+`--slots`: Numer of simultaneous touchs. Multi-mode only  
+
+## Troubleshooting
+
+### Touch is not working at all:
+#### Check connectivity between TUIO device and host. The default TUIO port is **3333**. 
+You can change the port in the configuration file: `/etc/tuio-bridge.yaml`
+```bash
+ping <TUIO_DEVICE_IP>
+```
+
+#### Check for packages being received on host from TUIO device.
+```bash
+sudo tcpdump -i any udp port 3333
+```
+you must see a series of control packages coming from the TUIO device.  
+ie: `16:45:32.350741 enp0s25 In  IP 192.168.137.145.42442 > 192.168.137.1.3333: UDP, length 7`
+
+#### Check tuio-bridge service
+```bash
+sudo systemctl status tuio-bridge
+```
+Active: active (running)
+
+```bash
+sudo $ sudo netstat -pltnu 3333 | grep ":3333"
+```
+udp        0      0 0.0.0.0:3333            0.0.0.0:*                           1438/python3
+
+#### Run tuio-bridge using `--debug` option.
+```bash
+sudo systemctl stop tuio-bridge
+/usr/bin/tuio-bridge --debug
+```
+touch the screen and you must see touch coordinates
+
+### Touch is working but missplaced.
+
+#### Check if the resolution is properly set on config file. Default is 1920x1080
+You can change the resolution in the configuration file: `/etc/tuio-bridge.yaml`
 
 ## About tuio_bridge project 
 
