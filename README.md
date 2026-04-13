@@ -22,7 +22,7 @@ This project was initially planned as a replacement for Multitaction Cornerstone
 
 ## Installation
 
-Install and test:
+Run and test:
 ```bash
 pip install -r requirements.txt
 sudo python3 tuio_touch/bridge.py
@@ -41,6 +41,7 @@ sudo ./setup.sh
 `--debug`: Enable debug logs  
 `--config`: Define configuration file  
 `--mode`: Touch screen mode: single or multi
+`--slots`: Numer of simultaneous touchs. Multi-mode only
 
 ## About tuio_bridge project 
 
@@ -50,8 +51,9 @@ Created a Linux input bridge
 
 ## To do 
 
-Multi touch support for gestures on Gnome (in progress)
-deb package  
+Multi touch support for gestures on Gnome (in progress)  
+deb package / installation script (in progress)  
+Touch calibration help  
 
 ## Credits
 
