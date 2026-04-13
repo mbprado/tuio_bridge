@@ -23,17 +23,16 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y dpkg-dev
 
-      - name: Make build script executable
-        run: chmod +x build_deb.sh
-
       - name: Build package
         run: |
+          chmod +x build_deb.sh
           ./build_deb.sh
-          mv tuio-bridge_*.deb tuio-bridge_${{ env.VERSION }}_all.deb
-
-      - name: Create GitHub Release
+          ls -lh *.deb
+      
+      - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: tuio-bridge_${{ env.VERSION }}_all.deb
+          files: "*.deb"
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
