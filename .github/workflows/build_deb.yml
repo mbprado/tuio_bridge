@@ -28,12 +28,14 @@ jobs:
 
       - name: Build package
         run: |
-          ./build_deb.sh
-          mv tuio-bridge_*.deb tuio-bridge_${{ env.VERSION }}_all.deb
-
-      - name: Create GitHub Release
+          chmod +x build-deb.sh
+          ./build-deb.sh
+          ls -lh *.deb
+      
+      - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
-          files: tuio-bridge_${{ env.VERSION }}_all.deb
+          files: "*.deb"
+
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
