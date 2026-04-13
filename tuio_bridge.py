@@ -15,7 +15,7 @@ import signal
 import sys
 from evdev import UInput, AbsInfo, ecodes as e
 
-
+VERSION = "1.01"
 # -------------------
 # CONFIG LOADER
 # -------------------
@@ -57,6 +57,8 @@ def parse_args():
     p.add_argument("--debug", action="store_true")
     p.add_argument("--single", action="store_true", help="Force single-touch mode")
     p.add_argument("--slots", type=int, help="Max multitouch slots")
+    p.add_argument("--version", type=int, help="Print version and exit")
+    p.add_argument("--version", action="version", version=f"{VERSION}")
     return p.parse_args()
 
 # -------------------
