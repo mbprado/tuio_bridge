@@ -1,7 +1,7 @@
 set -e
 
 APP_NAME="tuio-bridge"
-VERSION="${VERSION:-1.01}"
+VERSION="${VERSION:-1.02}"
 
 BUILD_DIR="$(mktemp -d)"
 PKG_DIR="$BUILD_DIR/${APP_NAME}_${VERSION}"
