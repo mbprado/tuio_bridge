@@ -40,6 +40,7 @@ sudo ./setup.sh
 `--port`: TUIO UDP port  
 `--debug`: Enable debug logs  
 `--config`: Define configuration file  
+`--mode`: Touch screen mode: single or multi
 
 ## About tuio_bridge project 
 
@@ -49,7 +50,7 @@ Created a Linux input bridge
 
 ## To do 
 
-Multi touch support for gestures on Gnome
+Multi touch support for gestures on Gnome (in progress)
 deb package  
 
 ## Credits
