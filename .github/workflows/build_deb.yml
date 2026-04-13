@@ -23,13 +23,10 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y dpkg-dev
 
-      - name: Make build script executable
-        run: chmod +x build_deb.sh
-
       - name: Build package
         run: |
-          chmod +x build-deb.sh
-          ./build-deb.sh
+          chmod +x build_deb.sh
+          ./build_deb.sh
           ls -lh *.deb
       
       - name: Create Release
