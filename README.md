@@ -40,7 +40,7 @@ sudo ./setup.sh
 `--port`: TUIO UDP port  
 `--debug`: Enable debug logs  
 `--config`: Define configuration file  
-`--mode`: Touch screen mode: single or multi
+`--mode`: Touch screen mode: single or multi  
 `--slots`: Numer of simultaneous touchs. Multi-mode only
 
 ## About tuio_bridge project 
